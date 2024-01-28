@@ -1,7 +1,6 @@
-from tensorflow.keras.datasets import mnist
 from tensorflow import keras
-from tensorflow.keras import layers
-import tensorflow as tf
+from keras.datasets import mnist
+from keras import layers
 
 
 from trainable_layers import define_dense_model_with_hidden_layers, set_layers_to_trainable
@@ -31,4 +30,3 @@ def test_set_layers_to_trainable():
     assert model.layers[0].trainable == False
     assert model.layers[1].trainable == True
     assert model.layers[2].trainable == False
-    
